@@ -1,0 +1,29 @@
+[package]
+name = "cauldron"
+version = "0.0.3"
+description = "Pure rust audio decoder for wav, flac, mp3 and aac"
+authors = ["x0f5c3 <x0f5c3@tutanota.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+categories = ["multimedia::audio", "encoding"]
+keywords = ["audio", "decoder", "flac", "wav", "mp3"]
+homepage = "https://github.com/x0f5c3/cauldron"
+repository = "https://github.com/x0f5c3/cauldron"
+edition = "2018"
+exclude = [
+	"tests/*",
+	"examples/*",
+]
+
+[dependencies]
+bitflags = "1.2"
+num-traits = "0.2.15"
+tracing = "0.1.35"
+
+[dev-dependencies]
+cpal = "0.13.5"
+criterion = "0.3"
+
+[[bench]]
+name = "cauldron_benchmark"
+harness = false
